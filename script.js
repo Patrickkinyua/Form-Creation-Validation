@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the form from submitting
         feedbackDiv.style.display = "block"; // Show the feedback div
-        feedbackDiv.textContent = "Form submitted successfully!"; // Set feedback message
+        feedbackDiv.textContent = "Registration successful!"; // Set feedback message
     });
-    const name = document.getElementById("name").value.trim();
+    const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 let isvalid = true;
