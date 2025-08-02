@@ -33,7 +33,8 @@ let messages = [];
 
     if (!isValid) {
         feedbackDiv.style.display = "block";
-        feedbackDiv.textContent = messages.join(" ");
+        feedbackDiv.innerHTML = messages.join("<br>"); // Display error messages
+        feedbackDiv.style.color = "#dc3545"; // Set error color
     } else {
         feedbackDiv.style.display = "none"; // Hide feedback if valid
     }
