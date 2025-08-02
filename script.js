@@ -23,7 +23,7 @@ let messages = [];
         isValid = false;
         messages.push("Email format is invalid.");
     }
-    if (password === "") {
+    if (password === "" || password.length < 8) {
         isValid = false;
         messages.push("Password is required.");
     } else if (password.length < 6) {
