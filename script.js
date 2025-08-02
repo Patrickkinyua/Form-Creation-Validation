@@ -10,30 +10,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 let isvalid = true;
-let meassages = [];
+let messages = [];
 
     if (name === "") {
         isvalid = false;
-        meassages.push("Name is required.");
+        messages.push("Name is required.");
     }
     if (email === "") {
         isvalid = false;
         meassages.push("Email is required.");
     } else if (!/\S+@\S+\.\S+/.test(email)) {
         isvalid = false;
-        meassages.push("Email format is invalid.");
+        messages.push("Email format is invalid.");
     }
     if (password === "") {
         isvalid = false;
-        meassages.push("Password is required.");
+        messages.push("Password is required.");
     } else if (password.length < 6) {
         isvalid = false;
-        meassages.push("Password must be at least 6 characters long.");
+        messages.push("Password must be at least 6 characters long.");
     }
     
     if (!isvalid) {
         feedbackDiv.style.display = "block";
-        feedbackDiv.textContent = meassages.join(" ");
+        feedbackDiv.textContent = messages.join(" ");
     } else {
         feedbackDiv.style.display = "none"; // Hide feedback if valid
     }
