@@ -9,29 +9,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
-let isvalid = true;
+let isValid = true;
 let messages = [];
 
     if (name === "") {
-        isvalid = false;
+        isValid = false;
         messages.push("Name is required.");
     }
     if (email === "") {
-        isvalid = false;
-        meassages.push("Email is required.");
+        isValid = false;
+        messages.push("Email is required.");
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-        isvalid = false;
+        isValid = false;
         messages.push("Email format is invalid.");
     }
     if (password === "") {
-        isvalid = false;
+        isValid = false;
         messages.push("Password is required.");
     } else if (password.length < 6) {
-        isvalid = false;
+        isValid = false;
         messages.push("Password must be at least 6 characters long.");
     }
-    
-    if (!isvalid) {
+
+    if (!isValid) {
         feedbackDiv.style.display = "block";
         feedbackDiv.textContent = messages.join(" ");
     } else {
