@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
 let isValid = true;
 let messages = [];
 
-    if (name === "") {
+    if (username.length === 0) {
         isValid = false;
-        messages.push("Name is required.");
+        messages.push("Username is required.");
     }
     if (email === "") {
         isValid = false;
